@@ -1,0 +1,64 @@
+<!-- We'll build a calculator
+Setup: Add the HTML structure
+1. create 5 buttons [1, 2, 3, +, =] (Will add more buttons which is [4, 5, 6, -, *, /])
+2. create a <script>, create a variable called 'calculation', and save an empty string inside: let calculation = ''; (this variable will store the calculation like '1+2' or '11+2+2')
+) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Lesson 5 Challenge Exercise</title>
+    <style>
+        body {
+            background-color: white;
+            font-family: 'Arial', sans-serif;
+            color: black;
+        }
+        .buttons button {
+            padding: 10px;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <div class="buttons">
+        <p>
+            <button class="one" onclick="calculation += '1'; console.log(calculation);">1</button>
+            <button class="two" onclick="calculation += '2'; console.log(calculation);">2</button>
+            <button class="three" onclick="calculation += '3'; console.log(calculation);">3</button>
+            <button class="clear" onclick="calculation = ''; console.log('Calculation cleared');">C</button>
+        <p>
+            <button class="four" onclick="calculation += '4'; console.log(calculation);">4</button>
+            <button class="five" onclick="calculation += '5'; console.log(calculation);">5</button>
+            <button class="six" onclick="calculation += '6'; console.log(calculation);">6</button>
+            <button class="multiply" onclick="calculation += ' * '; console.log(calculation);">×</button>
+
+        </p>
+        <p>
+            <button class="seven" onclick="calculation += '7'; console.log(calculation);">7</button>
+            <button class="eight" onclick="calculation += '8'; console.log(calculation);">8</button>
+            <button class="nine" onclick="calculation += '9'; console.log(calculation);
+            ">9</button>
+            <button class="divide" onclick="calculation += ' / '; console.log(calculation);">÷</button>            
+        </p>
+        <p>
+            <button class="add" onclick="calculation += ' + '; console.log(calculation);">+</button>
+            <button class="zero" onclick="calculation += '0'; console.log(calculation);">0</button>
+            <button class="minus" onclick="calculation += ' - '; console.log(calculation);">-</button>
+            <button class="equals" onclick="console.log(`Result: ${eval(calculation)}`); calculation = '';">=</button>
+        </p>
+        
+        
+        
+        
+        
+
+        
+    </div>
+    <script>
+        let calculation = ''; // Initialize the calculation variable
+    </script>
+</body>
+</html>

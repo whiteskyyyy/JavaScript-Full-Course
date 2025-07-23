@@ -1,0 +1,74 @@
+<!-- Lesson 4 Exercises - HTML CSS Review, console.log -->
+
+<!DOCTYPE html> <!-- Declares the document as an HTML5 document -->
+<html lang="en"> <!-- Root element of the HTML document, language set to English -->
+
+<head>
+    <title>
+        Buttons
+    </title> <!-- Title of the web page shown in browser tab -->
+    
+    <style>
+        body {
+            background-color: lightblue; /* Sets the background color of the page to light blue */
+            font-family: Arial, sans-serif; /* Sets the font to Arial, fallback to sans-serif if Arial is not available */
+        }
+
+        .Add {
+            background-color: yellow; /* Button background color set to yellow */
+            color: black; /* Text color set to black */
+            padding: 10px 20px; /* Adds space inside the button: 10px top-bottom, 20px left-right */
+            border: 2px solid black; /* Border is 2 pixels wide, solid, and black */
+            border-radius: 20px; /* Rounds the corners of the button (pill shape) */
+            cursor: pointer; /* Changes cursor to a pointer when hovered over */
+        }
+
+        .BN {
+            background-color: orange; /* Button background color set to orange */
+            color: black; /* Text color set to black */
+            padding: 10px 20px; /* Adds same padding as .Add button */
+            border: 2px solid black; /* Border is 2 pixels wide, solid, and black */
+            border-radius: 20px; /* Rounds the corners of the button (pill shape) */
+            cursor: pointer; /* Changes cursor to a pointer on hover */
+        }
+
+        .button-group {
+            margin-top: 30px; /* Adds 30px space above this group (pushing it away from the paragraph) */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Three basic buttons with default styling -->
+    <button>
+        Click
+    </button>
+    <button>
+        Seth Marcus Martin
+    </button>
+    <button>
+        Yosi
+    </button>
+
+    <p>
+        Hello, World!
+    </p> <!-- Paragraph showing a simple greeting -->
+
+    <!-- ❗ Note: <p2> is not a valid HTML tag. Use <p> or <div> instead -->
+    <p>
+        Today, I started to do my overdued laundry and continue my lesson with Javascript
+    </p> <!-- Paragraph describing what you did today -->
+
+    <!-- Button group placed inside a container div for layout control -->
+    <div class="button-group">
+        <button class="Add">Add to Cart</button> <!-- Yellow styled button -->
+        <button class="BN">Buy Now</button> <!-- Orange styled button -->
+    </div>
+
+    <script>
+        // JavaScript can go here
+        alert("Welcome!");
+        console.log("Welcome");
+    </script>
+</body>
+</html> <!-- End of the HTML document -->

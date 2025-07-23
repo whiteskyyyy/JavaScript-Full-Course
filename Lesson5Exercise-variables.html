@@ -1,0 +1,43 @@
+<!-- Create a <script> element. inside the <script> create a variable called 'name', and save  your name in this variable -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Exercises - Variables</title>
+    <style>
+        body {
+            background-color: white;
+            font-family: 'Arial', sans-serif;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        //create a variable called 'name' and save your name in this variable
+        let name = "Seth Marcus Martin"; 
+        //display the message 'My name is: ${name}' in the console
+        console.log(`My name is: ${name}`);
+        //at a restaurant, you order 1 coffee ($5), 2 bagels ($3 each), and 1 soup ($9). calculcate the cost and save it in a variable called 'cost'
+        let coffee = 5;
+        let bagel = 3;
+        let soup = 9;
+        let cost = coffee + (2 * bagel) + soup; // 1 coffee, 2 bagels, 1 soup
+        //display the message 'The total cost is: $${cost}' in the console
+        console.log(`The total cost is: $${cost}`);
+
+        //let's say the restaurant charges a 10% tax. using the 'cost' variable, calculate the tax, and save the result in a variable called 'tax'
+        let tax = cost * 0.10; // 10% tax
+        //display the message 'The tax is: $${tax}' in the console
+        console.log(`The tax (10%) is: $${tax}`);
+        //calculate the total amount to pay, including tax, and save it in a variable called 'total'
+        let totalCost = cost + tax;
+        //display the message 'The total amount to pay is: $${total}' in the console
+        console.log(`The total amount to pay is: $${totalCost}`);
+        
+
+    </script>
+</body>
+
+</html>

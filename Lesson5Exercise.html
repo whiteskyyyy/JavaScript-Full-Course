@@ -1,0 +1,107 @@
+<!-- I will try the cart quantity exercise on my own -->
+<!--  I did the Exercise before watching the video -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <title>Variable Exercise</title>
+    <style>
+        body {
+            background-color: white;
+            font-family: 'Arial', sans-serif;
+            color: black;
+        }
+        .show, .add, .two, .three, .Reset, .four, .five, .R1, .R2, .R3 {
+            background-color: darkkhaki;
+            color: darkgreen;
+            padding: 20px 30px;
+            border: 2px solid darkgreen;
+            cursor: pointer;
+            margin: 5px;
+            transition: transform 0.1s ease; /* Smooth scaling transition */
+        }
+
+        .show:active, .add:active, .two:active, .three:active, .Reset:active, .four:active, .five:active, .R1:active, .R2:active, .R3:active {
+            transform: scale(0.95); /* Shrinks the button slightly when pressed */
+        }
+        .buttons {
+            display: flex; /* Use flexbox for layout */
+            gap: 10px; /* Space between buttons */
+            margin-top: 10px; /* Space above the button group */
+        }
+        .buttons1 {
+            display: flex; /* Use flexbox for layout */
+            gap: 10px; /* Space between buttons */
+            margin-top: 10px; /* Space above the button group */
+            margin-bottom: 10px; /* Space below the button group */
+        }
+    </style>
+</head>
+
+<body>
+    <p>Cart Quantity Exercise</p>
+    <dev class="buttons">
+        <button class = "show" 
+            onclick="console.log(`Cart quantity: ${cartQuantity}`)">
+            Show Quantity
+        </button>
+        <button class="add" 
+            onclick="cartQuantity += 1, 
+            console.log(`Cart quantity: ${cartQuantity}`)">
+            Add to cart
+        </button>
+        <button class="two" 
+            onclick="cartQuantity += 2, 
+            console.log(`Cart quantity: ${cartQuantity}`)">
+            +2
+        </button>
+        <button class="three" 
+            onclick="cartQuantity += 3, 
+            console.log(`Cart quantity: ${cartQuantity}`)">
+            +3
+        </button>
+        <button class="four" 
+            onclick="cartQuantity += 4, 
+            console.log('Cart quantity: ' + cartQuantity)">
+            +4
+        </button>
+        <button class="five" 
+            onclick="cartQuantity += 5, 
+            console.log('Cart quantity: ' + cartQuantity)">
+            +5
+        </button>
+    </dev>
+    <dev class="buttons1">
+        <button class="R1" 
+            onclick="cartQuantity --, 
+            console.log('Cart quantity: ' + cartQuantity)">
+            Remove from cart
+        </button>
+        <button class="R2" 
+            onclick="cartQuantity -= 2, 
+            console.log('Cart quantity: ' + cartQuantity)">
+            -2
+        </button>
+        <button class="R3" 
+            onclick="cartQuantity -= 3, 
+            console.log('Cart quantity: ' + cartQuantity)">
+            -3
+        </button>
+    </dev>
+    <button class="Reset" 
+        onclick="cartQuantity = 0, 
+        console.log('Cart quantity: ' + cartQuantity)">
+        Reset Cart
+    </button>
+
+    <script>
+        cartQuantity = 0; // Initialize cart quantity
+        
+    </script>
+
+</body>
+
+</html>

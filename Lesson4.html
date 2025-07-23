@@ -1,0 +1,58 @@
+<!-- //Lesson 4: HTML, CSS, and JavaScript
+//This code is a refresher about HTML and CSS on JavaScript -->
+
+
+<!DOCTYPE html> <!-- Declares the document as HTML5 -->
+<html lang="en"> <!-- Sets the language of the page to English -->
+<head> <!-- Head section contains metadata, title, and styles -->
+    <title>Example HTML Document</title> <!-- Title shown in browser tab -->
+    <style> /* <!-- Start of internal CSS styling --> */
+        body {
+            background-color: whitesmoke; /* // Sets background color to light gray */
+            font-family: Arial, sans-serif; /* // Sets font to Arial, fallback to   */
+        }
+        .btn {
+            background-color: #000000;  /* // Button background is black */
+            color: rgb(255, 0, 0);      /* // Text color is red */
+            padding: 10px 20px;         /* // Top-bottom: 10px, left-right: 20px padding */
+            border: none;               /* // Removes border */
+            border-radius: 5px;         /* // Rounds the corners slightly */
+            cursor: pointer;            /*  // Changes cursor to hand icon on hover */
+        }
+        .btn2 {
+            background-color: #fffdfd; /* // Very light background color (near white) */
+            color: rgb(17, 12, 12);   /* // Dark text color */
+            padding: 10px 20px;         /* // Same padding as .btn */
+            border-radius: 5px;         /*  // Rounded corners */
+            cursor: pointer;            /* // Hand pointer on hover */
+        }
+    </style>                            <!-- End of CSS -->
+</head>
+<body>                                  <!-- Body section: visible content of the webpage -->
+
+    <!-- First button -->
+    <button title="Click me" class="btn"> <!-- Tooltip on hover, styled with .btn class -->
+        HI <!-- Text displayed on the button -->
+    </button>
+
+    <p> <!-- Paragraph containing text and another button -->
+        paragraph <!-- Text content -->
+        <button title="Click me" class="btn2"> <!-- Tooltip, styled with .btn2 class -->
+            tite <!-- Button text (likely a placeholder or typo) -->
+        </button>
+        malputs <!-- Additional paragraph text (likely placeholder) -->
+    </p>
+
+    <script> <!-- Start of JavaScript block -->
+        // JavaScript to handle button clicks
+
+        document.querySelector('.btn').addEventListener('click', function() {
+            alert('Button clicked!'); // Shows an alert when the first button is clicked
+        });
+
+        document.querySelector('.btn2').addEventListener('click', function() {
+            alert('Second button clicked!'); // Shows an alert when the second button is clicked
+        });
+    </script> <!-- End of JavaScript -->
+</body> <!-- End of visible content -->
+</html> <!-- End of HTML document -->

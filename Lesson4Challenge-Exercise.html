@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- Declares the document as an HTML5 document -->
+<html lang="en"> <!-- Root element of the HTML document, language set to English -->
+    
+<head>
+    <title>
+        Challenge Exercise 1
+    </title>
+    <style>
+        body {
+            background-color: white;
+            font-family: 'Times New Roman', Times, serif;
+            color: black;
+        }
+        .buttons {
+            display: flex; /* Use flexbox for layout */
+            gap: 10px; /* Space between buttons */
+            margin-top: 10px; /* Space above the button group */
+        }
+        .Add {
+            background-color: yellow; /* Button background color set to yellow */
+            color: black; /* Text color set to black */
+            padding: 5px 10px; /* Adds space inside the button: 10px top-bottom, 20px left-right */
+            border: 2px solid black; /* Border is 2 pixels wide, solid, and black */
+            cursor: pointer; /* Changes cursor to a pointer when hovered over */
+        }
+        .BN {
+            background-color: orange; /* Button background color set to orange */
+            color: black; /* Text color set to black */
+            padding: 5px 10px; /* Adds same padding as .Add button */
+            border: 2px solid black; /* Border is 2 pixels wide, solid, and black */
+            cursor: pointer; /* Changes cursor to a pointer on hover */
+        }
+    </style>
+</head>
+<body>
+    <p>
+        Adults Plain Cotton T-shirt
+    </p>
+    <p1>
+        Price: $7.99
+    </p1>
+    <div class="buttons">
+        <button class="Add" onclick="alert('Item added to cart!')">
+            Add to Cart
+        </button>
+        <button class="BN" onclick="console.log('Loading'), alert('Purchased!')">
+            Buy Now
+        </button>
+    </div>
+</body>
+
+</html>
