@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Lesson 6 Exercise</title>
+    <style>
+        body {
+            background-color: white;
+            font-family: 'Arial', sans-serif;
+            color: black;
+        }
+        .buttons button {
+            padding: 10px;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Coin Flip</h1>
+    <button onclick="flipCoin()">Flip Coin</button>
+    <button onclick="flipCoin(guess = 'Heads')">
+        Heads
+    </button>
+    <button onclick="flipCoin(guess = 'Tails')">
+        Tails
+    <script>
+        function flipCoin(guess) {
+            /* result = Math.random() <= 0.5 ? 'Heads' : 'Tails';
+            console.log(`Coin flip result: ${result}`);
+            alert(`Coin flip result: ${result}`); */
+
+            if (Math.random() <= 0.5) {
+                result = 'Heads';
+            } else {
+                result = 'Tails';
+            }
+            guess === result ? 
+                console.log(`You guessed right! The coin landed on ${result}`) : 
+                console.log(`You guessed wrong! The coin landed on ${result}`);
+            alert(`You guessed ${guess}. The coin landed on ${result}.`);
+
+        }
+    </script>
+</body>
+</html>

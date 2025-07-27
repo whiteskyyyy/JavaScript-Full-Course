@@ -1,0 +1,118 @@
+<!-- we'll improve the cart Quantity project. First, make a copy the 5k -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Cart Quantity Exercise</title>
+        <style>
+        body {
+            background-color: white;
+            font-family: 'Arial', sans-serif;
+            color: black;
+        }
+        .show, .add, .two, .three, .Reset, .four, .five, .R1, .R2, .R3 {
+            background-color: darkkhaki;
+            color: darkgreen;
+            padding: 20px 30px;
+            border: 2px solid darkgreen;
+            cursor: pointer;
+            margin: 5px;
+            transition: transform 0.1s ease; /* Smooth scaling transition */
+        }
+
+        .show:active, .add:active, .two:active, .three:active, .Reset:active, .four:active, .five:active, .R1:active, .R2:active, .R3:active {
+            transform: scale(0.95); /* Shrinks the button slightly when pressed */
+        }
+        .buttons {
+            display: flex; /* Use flexbox for layout */
+            gap: 10px; /* Space between buttons */
+            margin-top: 10px; /* Space above the button group */
+        }
+        .buttons1 {
+            display: flex; /* Use flexbox for layout */
+            gap: 10px; /* Space between buttons */
+            margin-top: 10px; /* Space above the button group */
+            margin-bottom: 10px; /* Space below the button group */
+        }
+        </style>
+    </head>
+    <body>
+        <dev class="buttons">
+            <button class = "show" 
+                onclick="console.log(`Cart quantity: ${cartQuantity}`)">
+                Show Quantity
+            </button>
+            <button class="add" 
+                onclick="cartQuantity + 1 > 10 ? console.log(`Cart is already full`) : AddtoCart(pressed = 1)">
+                Add to cart
+            </button>
+            <button class="two" 
+                onclick="cartQuantity + 2 > 10 ? console.log(`Cart is already full`) : AddtoCart(pressed = 2)">
+                +2
+            </button>
+            <button class="three" 
+                onclick="cartQuantity + 3 > 10 ? console.log(`Cart is already full`) : AddtoCart(pressed = 3)">
+                +3
+            </button>
+            <button class="four" 
+                onclick="cartQuantity + 4 > 10 ? console.log(`Cart is already full`) : AddtoCart(pressed = 4)">
+                +4
+            </button>
+            <button class="five" 
+                onclick="cartQuantity + 5 > 10 ? console.log(`Cart is already full`) : AddtoCart(pressed = 5)">
+                +5
+            </button>
+        </dev>
+        <dev class="buttons1">
+            <button class="R1" 
+                onclick="cartQuantity -1 < 0 ? console.log(`Cart is already empty`) : AddtoCart(pressed = -1)">
+                Remove from cart
+            </button>
+            <button class="R2" 
+                onclick="cartQuantity -2 < 0 ? console.log(`Cart is already empty`) : AddtoCart(pressed = -2)">
+                -2
+            </button>
+            <button class="R3" 
+                onclick="cartQuantity -3 < 0 ? console.log(`Cart is already empty`) : AddtoCart(pressed = -3)">
+                -3
+            </button>
+        </dev>
+        <button class="Reset" 
+            onclick="cartQuantity = 0; console.log(`Cart quantity reset to: ${cartQuantity}`);">
+            Reset Cart
+        </button>
+
+        <script>
+            cartQuantity = 0; // Initialize cart quantity
+            function AddtoCart(pressed){
+                //limit cart quantity to 10 items
+                cartQuantity = cartQuantity + pressed;
+                console.log(`Cart quantity: ${cartQuantity}`);
+
+                /* if (pressed === 'add') {
+                    cartQuantity += 1;
+                } else if (pressed === 'two') {
+                    cartQuantity += 2;
+                } else if (pressed === 'three') {
+                    cartQuantity += 3;
+                } else if (pressed === 'four') {
+                    cartQuantity += 4;
+                } else if (pressed === 'five') {
+                    cartQuantity += 5;
+                } else if (pressed === 'remove') {
+                    cartQuantity -= 1;
+                } else if (pressed === 'R2') {
+                    cartQuantity -= 2;
+                } else if (pressed === 'R3') {
+                    cartQuantity -= 3;
+                } else if (pressed === 'reset') {
+                    cartQuantity = 0;
+                }
+                console.log(`Cart quantity: ${cartQuantity}`); */
+
+            }
+            
+            
+        </script>
+    </body>
+</html>
