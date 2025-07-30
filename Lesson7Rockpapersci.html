@@ -1,0 +1,50 @@
+<!-- Rock paper scissors exercise -->
+<!--  Doing activities on my own before watching the actual lesson
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Lesson 6: Rock Paper Scissors</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rock Paper Scissors Game</h1>
+    <button onclick="playRPS('rock')">Rock</button>
+    <button onclick="playRPS('paper')">Paper</button>
+    <button onclick="playRPS('scissors')">Scissors</button>
+
+    <script>
+        // Function to play Rock Paper Scissors
+        function playRPS(playerChoice) {
+            const choices = ['rock', 'paper', 'scissors'];
+            const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+            console.log(`Player chose: ${playerChoice}`);
+            console.log(`Computer chose: ${computerChoice}`);
+            alert(conditions(playerChoice, computerChoice));
+        }
+
+        function conditions(playerChoice, computerChoice) {
+            if (playerChoice === computerChoice) {
+                console.log("It's a tie!");
+                return "It's a tie!";
+            } else if (
+                (playerChoice === 'rock' && computerChoice === 'scissors') ||
+                (playerChoice === 'paper' && computerChoice === 'rock') ||
+                (playerChoice === 'scissors' && computerChoice === 'paper')
+            ) {
+                console.log("Player wins!");
+                return "Player wins!";
+            } else {
+                console.log("Computer wins!");
+                return "Computer wins!";
+            }
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            Exercise: Functions
+        </title>
+    </head>
+    <body>
+        <script>
+            //7a
+            function greet(){
+                console.log('hello')
+            }
+            greet();
+            //7b
+            function greet1(name){
+                console.log(`Hello ${name}`);
+            }
+            greet1('John');
+            greet1('Simon');
+            greet1('Mary');
+            //7c
+            greet1();
+            function greet2(name){
+                if(!name){
+                    console.log('hello');
+                }
+                else{
+                    console.log(`Hello ${name}`);
+                }
+            }
+            greet2();
+            greet2('John');
+
+            //7d
+            function convertToFahrenheit(celsius){
+                return (celsius * 9/5) + 32;
+            }
+            //7e
+            function convertToCelsius(fahrenheit){
+                return (fahrenheit - 32) * 5/9;
+            }
+            //7f
+            function convertTemperature(degrees, unit) {
+                if (unit.toLowerCase() === 'c') {
+                    return convertToFahrenheit(degrees);
+                } else if (unit.toLowerCase() === 'f') {
+                    return convertToCelsius(degrees);
+                } else {
+                    console.log('Invalid unit. Please use "C" for Celsius or "F" for Fahrenheit.');
+                    return null;
+                }
+            }
+            console.log(convertTemperature(0, 'C')); // 32
+            console.log(convertTemperature(32, 'F')); // 0
+            console.log(convertToCelsius(100)); // 37.77777777777778
+            console.log(convertToFahrenheit(25)); // 212
+
+            //7g
+            function convertLength(length, from, to) {
+                //1 mile = 1.60934 kilometers
+                if(from.toLowerCase() === 'km' && to.toLowerCase() === 'miles') {
+                    return length / 1.60934;
+                }else if (from.toLowerCase() === 'miles' && to.toLowerCase() === 'km') {
+                    return length * 1.60934;
+                } else if (from.toLowerCase() === 'miles' && to.toLowerCase() === 'miles') {
+                    return length;
+                } else if (from.toLowerCase() === 'km' && to.toLowerCase() === 'km') {
+                    return length;
+                } else {
+                    console.log('Invalid conversion units. Please use "km" or "miles".');
+                    return null;
+
+                }
+            }
+            console.log((Math.round(convertLength(1, 'km', 'miles') * 1000) / 1000)); // 0.621371
+            console.log((Math.round(convertLength(1, 'miles', 'km') * 1000) / 1000)); // 1.60934
+
+            //7h & 7i
+            function convertLength1(length, from, to){
+                //1 mile = 5280 feet
+                //1km = 3281 feet approximately
+
+                if(from.toLowerCase() === 'km' && to.toLowerCase() === 'miles') {
+                    return length / 1.60934;
+                }else if (from.toLowerCase() === 'miles' && to.toLowerCase() === 'km') {
+                    return length * 1.60934;
+                } else if (from.toLowerCase() === 'miles' && to.toLowerCase() === 'miles') {
+                    return length;
+                } else if (from.toLowerCase() === 'km' && to.toLowerCase() === 'km') {
+                    return length;
+                }else if (from.toLowerCase() === 'ft' && to.toLowerCase() === 'km'){
+                    return length * 0.0003048;
+                }else if (from.toLowerCase() === 'ft' && to.toLowerCase() === 'miles'){
+                    return length * 0.000189394;
+                }else if (from.toLowerCase() === 'km' && to.toLowerCase() === 'ft'){
+                    return length * 3281;
+                }else if (from.toLowerCase() === 'miles' && to.toLowerCase() === 'ft'){
+                    return length * 5280;
+                }else {
+                    console.log('Invalid conversion units. Please use "km", "miles", or "ft".');
+                    return null;
+
+                }
+
+            }
+            console.log(convertLength1(5, 'miles', 'km'));
+            console.log(convertLength1(5, 'miles', 'ft'));
+            console.log(convertLength1(5, 'km','ft'));
+
+        </script>
+    </body>
+</html>

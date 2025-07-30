@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Functions</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                line-height: 1.6;
+            }
+            h1 {
+                color: #333;
+            }
+            p {
+                margin-bottom: 10px;
+            }
+            code {
+                background-color: #f4f4f4;
+                padding: 2px 4px;
+                border-radius: 3px;
+            }
+            pre {
+                background-color: #f4f4f4;
+                padding: 10px;
+                border-radius: 3px;
+                overflow-x: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            /* function funky1(){
+                console.log("Funky 1 is running");
+            }
+
+            funky1(); */
+
+            /* //parameters
+            //return = gets a value out of a function
+            function funky1(name) {
+                console.log("Funky 1 is running");
+                return "Hello " + name;
+            }
+            //parameters = putsa value into a function
+            function funky2(name) {
+                console.log("Funky 2 is running");
+                console.log("Hello " + name);
+            }
+            console.log(funky1("John"));
+            funky2("John"); */
+
+            function calculateTax(price = 0, Quantity = 1) {
+                console.log(price * Quantity * 0.10);
+                return price * Quantity * 0.10; // Assuming a tax rate of 10%
+            }
+            calculateTax();
+            calculateTax(100, 2);
+            calculateTax(50, 3);
+        </script>
+    </body>
+</html>
