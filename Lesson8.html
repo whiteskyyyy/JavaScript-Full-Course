@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Objects</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                line-height: 1.6;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            /* const product = {
+                name: 'lopit',
+                price: 100
+            };
+            console.log(product);
+            console.log(product.name);
+            console.log(product.price);
+
+            product.name = 'mas malupet'
+            console.log(product)
+
+            product.qty = 2
+            console.log(product)
+
+            delete product.qty
+            console.log(product) */
+
+            /* const product2 = {
+                name: `shirt`,
+                'deliver-time': 'one day',
+                //nested object
+                rating: {
+                    stars: 4.5,
+                    count: 87
+                },
+                //when save functions inside an object is called method
+                fun: function fuls() {
+                    console.log('function inside object')
+                }
+            };
+
+            console.log(product2)
+            console.log(product2.name)
+            //bracket notation
+            //use properties that don't work with dot notations
+            console.log(product2['deliver-time'])
+
+            console.log(product2.rating.stars)
+
+            product2.fun()
+            // Built-in objects example:
+            // 'console' is a built-in object in JavaScript.
+            // It has methods like 'log' that you can use to output messages.
+            console.log('This is a message using the built-in console object.');
+
+            // Another example: 'Math' is a built-in object with methods and properties.
+            console.log('Random number:', Math.random());
+            console.log('Value of PI:', Math.PI);
+
+            // 2 more build in objects
+            //json
+            //convert javascript to json
+            JSON.stringify(product2)
+            //json to javascript
+            JSON.pars(JSON.stringify(product2))
+
+            //local storage
+            //localStorage only support strings
+            localStorage.setItem('message', 'hello');
+            console.log(localStorage.getItem('message')) */
+
+            console.log('hello'.length)
+            console.log('hello'.toUpperCase())
+
+            //objects are references
+            const object1 = {
+                message: 'hello'
+            }
+            const object2 = object1
+
+            object1.message = 'Good Morning'
+            console.log(object1)
+            //object2 has the same value of object1 even though it was changed because the value are just references
+            //we're getting the data from the same box
+            console.log(object2)
+            //we can't compare objects directly
+            const object3 = {
+                message: 'Good Morning',
+            }
+
+            console.log(object3 === object1)
+            //it shows false
+            //it compares the references not the value
+            console.log(object2 === object1)
+            //compairing the value directly would lead to true
+            //compairing objects aren't compared directly
+            console.log(object3.message === object1.message)
+
+            const object4 = {
+                message: 'Good Morning',
+                amount: 50,
+                price: 20
+            }
+            //destructuring took the property out of the object and save it to a variable
+            //const message = object3.message
+            const { message, price, amount } = object4
+            console.log(amount)
+            console.log(price)
+
+            //shorthand property
+            const object5 = {
+                // message: message
+                message,
+
+                //this is a shorthand method
+                //method: function func1(){
+                //    console.log('method')
+                //}
+                method(){
+                    console.log('method')
+                }
+            }
+
+            object5.method();
+
+            //sumnmary
+            //objects = group related values together
+            // built in objects (JSON, localStorage)
+            //About null, auto-boxing, reference
+            //shortcuts (destructuring, shorthand property, shorthand method)
+
+            
+        </script>
+    </body>
+</html>

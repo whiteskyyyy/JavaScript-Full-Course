@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Objects Exercises</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                line-height: 1.6;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+
+            //8a
+            const amazon = {
+                name: 'basketball',
+                price: 2095
+            }
+            console.log(amazon)
+            console.log(amazon.name, amazon.price)
+            //8b
+            amazon.price += 500
+            console.log(amazon.price)
+
+            //8c
+            amazon['delivery-time'] = '3 days'
+            console.log(amazon['delivery-time'])
+
+            //8d
+            const product1 = {
+                name: 'Shoe',
+                price: 59
+            };
+            const product2 = {
+                name: 'Shoe',
+                price: 59
+            };
+            const product3 = {
+                name: 'Hat',
+                price: 100
+            };
+
+            function comparePrice(product1, product2) {
+                return product1.price < product2.price ? product1.name : product2.name;
+            }
+            console.log(comparePrice(product1, product3))
+
+            //8e
+            function isSameProduct(product1, product2) {
+                const { name: name1, price: price1 } = product1;
+                const { name: name2, price: price2 } = product2;
+                return name1 === name2 && price1 === price2;
+            }
+
+            console.log(isSameProduct(product1, product2)); // true
+            console.log(isSameProduct(product1, product3)); // false
+            
+            //8f
+            console.log('GALIT AKO'.toLowerCase())
+
+            //8g
+            //repeat() is a method
+            console.log('pauletulet-'.repeat(3))
+
+        </script>
+    </body>
+</html>

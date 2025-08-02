@@ -1,0 +1,94 @@
+<!-- rock paper scissor game with score tracker using objects -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Objects RPS</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                line-height: 1.6;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1>
+            Rock Paper Scissors
+        </h1>
+        <button onclick ='game(`Rock`)'>
+            Rock
+        </button>
+        <button onclick ='game(`Paper`)'>
+            Paper
+        </button>
+        <button onclick ='game(`Scissors`)'>
+            Scissors
+        </button>
+        <button onclick ='reset()'>
+            Reset Score
+        </button>
+        <script>
+            const choices = [`Rock`,`Paper`, `Scissors`]
+
+            let scores = JSON.parse(localStorage.getItem('scors')) || {
+                score1: 0,
+                score2: 0,
+                score3: 0
+            }
+
+            /* if(!scores){
+                scores = {
+                    score1: 0,
+                    score2: 0,
+                    score3: 0
+                }
+            } */
+            /* {
+                score1: 0,
+                score2: 0,
+                score3: 0
+            } */
+
+            function computerChoice(){
+                cs = Math.floor(Math.random() * choices.length) 
+                return choices[cs]
+            }
+            function game(player) {
+                const computer = computerChoice();
+                const win = (player === 'Rock' && computer === 'Scissors') ||
+                            (player === 'Paper' && computer === 'Rock') ||
+                            (player === 'Scissors' && computer === 'Paper');
+                const result = player === computer ? 'Tie' : win ? 'Win' : 'Lose';
+                const announce = `You picked ${player}. Computer picked ${computer}. ${result}.`;
+
+                if(result === 'Win') {
+                    scores.score1++;
+                } else if(result === 'Lose') {
+                    scores.score2++;
+                } else {
+                    scores.score3++;
+                }
+
+                const scoreMsg = `Win: ${scores.score1} - Lose: ${scores.score2} - Tie: ${scores.score3}`;
+                alert(`${announce}\n${scoreMsg}`);
+                console.log(announce);
+                console.log(scoreMsg); 
+                localStorage.setItem('scors', JSON.stringify(scores))
+                return announce;
+            }
+
+            function reset(){
+                scores.score1 = 0;
+                scores.score2 = 0;
+                scores.score3 = 0;
+                localStorage.removeItem('scors')
+                alert(`The Game has reset`);
+                console.clear();
+                console.log(`Win: ${scores.score1} - Lose: ${scores.score2} - Tie: ${scores.score3}`);
+            }
+
+        </script>
+    </body>
+</html>
